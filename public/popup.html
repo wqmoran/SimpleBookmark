@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简洁书签</title>
+    <link href="../dist/tailwind.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 统一说明，在 Tailwind CSS 中，1 单位 = 0.25rem = 4px -->
+
+    <!-- 外层容器，宽度 288px，高度 320px，背景色灰色，透明度 20% -->
+    <div class="w-72 h-80 bg-gray-200">
+
+        <!-- 内层容器，充满宽度，高度 288px，背景色白色，左下和右下圆角，垂直居中，列方向布局 -->
+        <div class="w-full h-72 bg-white rounded-bl-xl rounded-br-xl flex items-center flex-col">
+
+            <!-- 标题行，宽度占父容器的 10/12，高度 32px，顶部外边距 12px，水平布局 -->
+            <div class="w-10/12 h-8 mt-3 flex">
+
+                <!-- 图片，宽度和高度均为 32px -->
+                <img class="w-8 h-full" src="images/logo48.png">
+
+                <!-- 标题文字，内联块布局，充满高度，左外边距 12px，字体大小大，加粗，行高 32px 以实现垂直居中 -->
+                <span class="inline-block h-full ml-3 text-lg font-bold leading-8">简洁书签</span>
+            </div>
+
+            <!-- “当前书签总数”文本，字体大小 24px，文字居中，加粗，顶部外边距 56px -->
+            <div class="text-2xl text-center font-bold mt-14">当前书签总数</div>
+
+            <!-- “5000”文本，字体大小 24px，文字居中，加粗，顶部外边距 8px，文本颜色自定义 [#56DFD3] -->
+            <div id="bookmarksCount" class="text-2xl text-center font-bold mt-2 text-[#56DFD3]">5000</div>
+        </div>
+
+        <!-- 底部版本号，充满宽度，高度 32px，文本颜色灰色，内容水平和垂直居中，字体大小 14px -->
+        <div class="w-full h-8 text-gray-400 flex items-center justify-center text-sm">v1.0.0</div>
+    </div>
+    <script src="../dist/popup.js"></script>
+</body>
+
+</html>
